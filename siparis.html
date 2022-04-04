@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Kırtasiye Ürün Sipariş Formu</title>
+    
+    <link rel='stylesheet' type='text/css'  href='main.css'>
+    <script src='code.js'></script>
+</head>
+<body onload="urunAdediDoldur();urunTaksidiDoldur()" bgcolor="#EEE8AA">
+    
+  <table width="80%" border="0" align="center"  cellpadding="0" cellspacing="0">
+  <tr>
+    <td> <img src="fotoo.png" width="100%"> </td> <td> <img src="foto.png" width="100%"> </td>
+  </tr>
+  <tr>
+  <td colspan="2" align="center" bgcolor="#f8ec06" > <font face="Verdana" color="red"size="5"> 
+    <a href="index.html">Anasayfa </a> / <a href="hakkimda.html">Hakkımda </a> / <a href="urunler.html"> Ürünler </a> / <a href="üyelik.html">Üyelik </a> /<a href="siparis.html"> Sipariş</a>  / <a href="iletisim.html"> İletişim </a> </font> 
+  </td>
+    </tr>
+  </table>
+    <h3> KIRTASİYE ÜRÜNLERİ SİPARİŞ FORMU</h3>
+    <form action="#" id="formUrun">
+        <label for="urunTipi">Ürün tipi seçimi yapınız</label>
+        <span>
+            <input type="radio" name="urunTipi" id="OfisUrunleri" value="O" onchange="urunleriGetir();">
+            <label for="ofisUrunleri">Ofis Ürünleri</label>
+            <input type="radio" name="urunTipi" id="kırtasiyeUrunleri" value="K" onchange="urunleriGetir();">
+            <label for="kırtasiyeUrunleri">Kırtasiye Ürünleri</label>
+        </span>
+        <label for="urunListesi">Ürün seçimi yapınız</label>       
+        <select name="" id="urunListesi" size="4"> </select>  
+        <label for="urunAdedi">Ürün adedini seçiniz</label> 
+        <select name="" id="urunAdedi"></select>  
+        <label for="urunTaksidi">Taksit sayısı seçiniz</label>
+        <select name="" id="urunTaksidi"></select>
+        <input type="button" value="Hesapla" id="btnAraToplam" onclick="Hesapla();">
+        <label for="txtBirimFiyat">Ürünün birim fiyatı</label>
+        <input type="text" name="" id="txtBirimFiyat" disabled>
+        <label for="txtAraToplam">Ara Toplam Tutarı</label>
+        <input type="text" name="" id="txtAraToplam" disabled>
+        <label for="txtKargo">Kargo ücreti</label>
+        <input type="text" name="" id="txtKargo" disabled>
+
+    </form>
+    <h4 id="sonuc"></h4>
+</body>
+</html>

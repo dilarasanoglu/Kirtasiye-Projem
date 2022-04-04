@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Kırtasiye Ürünleri Sipariş Formu</title>
+    
+    <link rel='stylesheet' type='text/css'  href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body onload="taksit();adet();">
+    <h3>Kırtasiye Ürünleri Sipariş Formu</h3>
+    <form action="#" id="urunForm">
+        <label for="uruntipi">Ürün tipi seçimi yapınız</label>
+        <span>
+            <input type="radio" name="uruntipi" id="ofisurunleri" value="O">
+            <label for="ofisrunleri">Ofis Ürünleri</label>
+            <input type="radio" name="uruntipi" id="kırtasiyeurunleri" value="K">
+            <label for="kırtasiyeurunleri">Kırtasiye Ürünleri</label>
+        </span>
+        <input type="button" value="Ürün listesini getir" id="btngetir" onclick="listeDoldur();">
+        <label for="urunlistesi">Ürün seçimi yapınız</label>       
+        <select name="" id="urunlistesi" size="4">
+           
+        </select>
+
+        <label for="urunadedi">Ürün adedini seçiniz</label> 
+        <select name="" id="urunadedi">
+           
+        </select>
+
+        <label for="uruntaksidi">Taksit sayısı seçiniz</label>
+        <select name="" id="uruntaksidi">
+            
+        </select>
+
+        <input type="button" value="Ara Toplamı Hesapla" id="btnaratoplam" onclick="fiyatHesapla();">
+
+        <label for="txtaratoplam">Ara Toplam Tutarı</label>
+        <input type="text" name="" id="txtaratoplam" disabled>
+
+        <label for="txtkargo">Kargo ücreti</label>
+        <input type="text" name="" id="txtkargo" disabled>
+    </form>
+    <h4 id="sonuc"></h4>
+</body>
+</html>

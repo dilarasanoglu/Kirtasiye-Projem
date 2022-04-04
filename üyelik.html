@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	
+ 	<title>DLR Kırtasiye</title>
+ 	<meta name="description" content="text/html">
+ 	<style> 
+	body { background-color:#FFCC99   } 	
+	h1 { color:#FFFF99 ; padding-left: 30px;text-align: center; } 
+
+</style>
+<script>
+
+
+function yasKontrolu(yas) 
+{ if (yas > 16) { 
+return true; } 
+else {
+ return confirm('Ön koşulları onaylayıp üye olmayı kabul ediyor musunuz?'); } 
+} 
+yas = prompt('Kaç yaşındasın?', 16); 
+if ( yasKontrolu(yas) ) 
+{ alert( 'Siteye erişimine izin verildi' ); } 
+else { alert( 'Siteye erişimine Reddedildi' ); }
+
+</script>
+
+
+	</head>
+
+ <body>
+
+ 	<table width="80%" border="0" align="center"  cellpadding="0" cellspacing="0">
+ 	<tr>
+ 		<td> <img src="fotoo.png" width="100%"> </td> <td> <img src="foto.png" width="100%"> </td>
+ 	</tr>
+ 	<tr>
+ 	<td colspan="2" align="center" bgcolor="#f8ec06" > <font face="Verdana" color="red"size="5"> 
+ 		<a href="index.html">Anasayfa </a> / <a href="hakkimda.html">Hakkımda </a> / <a href="urunler.html"> Ürünler </a> / <a href="üyelik.html">Üyelik </a> / <a href="siparis.html"> Sipariş</a>  / <a href="iletisim.html"> İletişim </a> </font> 
+ 	</td>
+    </tr>
+</table>
+    <h1>HIZLI ÜYELİK</h1>
+ <center><p> Siparişinizi tamamlamak için bu formu doldurmanız gereklidir.</p></center>
+    <form method = "post" action = " " name="feedback" align="center">
+<p><label>Name:
+<input name = "ad" type = "text" size = "20" maxlength="30"/>
+</label>
+<label>Surname:
+<input name = "soyad" type = "text" size = "30" maxlength="30"/>
+</label>
+</p>
+<p><label>Age:
+<input name= "yas" type = "text" size="10" maxlength="10"/>
+</label>
+</p>
+
+<p><label>Cinsiyet:<br>
+	<input name="cinsiyet" type="radio" value="k"> kadın
+	<input name="cinsiyet" type="radio" value="e"> erkek
+</label>
+</p>
+<p><label>E-mail Address:
+<input name = "e_mail" type = "password" size = "30">
+</label></p>
+<p><label>Telefon Numarası:
+<input name= "No" type = "sayi" size="10" maxlength="10"/>
+</label>
+</p>
+
+<center><input type="button" onclick="window.location.href = 'siparis.html';"value="Giriş Yap"></center>
+</form></body></html>
